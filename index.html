@@ -1,0 +1,61 @@
+<html>
+
+<head>
+
+<title>Project 78</title>
+<style>
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color:darkslateblue;
+}
+body {
+   background-color:lavenderblush;
+}
+img {
+    margin-left: 450px;
+    height: 450px;
+    width: 450px;
+}
+button {
+    margin-left: 650px;
+    background-color: gainsboro;
+    height: 35px;
+    font-size: 18;
+}
+h3 {
+    text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>My Family Book</h1>
+<img src="Family Book.jpg" id="im">
+<br>
+<h3 id="display"></h3>
+<button id="next" onclick="change_image()">Next</button>
+
+</body>
+
+<script>
+
+var ch_img = ["Dad.jpg","Mum.jpg","Girl.jpg","Boy.png","Family Book.jpg"];
+var ch_text = ["Nishant Goel","Nidhi Gupta","Dhruvi Goel","Akshat Goel"];
+var i = 0;
+function change_image(){
+    document.getElementById('im').src=ch_img[i];
+    document.getElementById('display').innerHTML=ch_text[i];
+    i = i+1;
+  if(i==5){
+    i = 0;
+    document.getElementById('im').src=ch_img[4];
+    document.getElementById('display').innerHTML=""
+  }
+}
+</script>
+
+</html>
